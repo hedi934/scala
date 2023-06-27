@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="./assets/scala.png" type="image/x-icon">
+    <link rel="icon" href="./assets/scala.png" type="image/x-icon">
+    <title>Scala handson</title>
+    <link rel="stylesheet" href="assets/remark-styles.css">
+    <link rel="stylesheet" href="assets/devoxx-2017/theme.css">
+</head>
+<body>
+    <!--
+        remark documentation: https://github.com/gnab/remark/wiki
+    -->
+    <textarea id="source">
+        ## Pré requis
+
+        Installez l'environnement :
+
+        - Installez Java 8
+        - Téléchargez le Hand's on : http://bit.ly/scala-handson
+        - Lancez `./handson go` pour télécharger les dépendances
+
+        ---
+
+        class: intro
+
+        # Scala class
+
+        - Fabrice Sznajderman [@fsznajderman](https://twitter.com/fsznajderman)
+        - Loïc Knuchel [@loicknuchel](https://twitter.com/loicknuchel)
+        - Walid Chergui [@walidchergui](https://twitter.com/walidchergui)
+
+        ---
+
+        class: speakers
+
+        ![Fabrice Sznajderman](./assets/fabrice-sznajderman.jpg) **Fabrice Sznajderman**, *Zenika*
+
+        ![Loïc Knuchel](./assets/loic-knuchel.jpg) **Loïc Knuchel**, *Criteo*
+
+        ![Walid Chergui](./assets/walid-chergui.jpg) **Walid Chergui**, *Freelance*
+
+        ---
+
+        ## Qu'est-ce que Scala ?
+        --
+
+        - Un langage créé en 2003
+        --
+
+        - Orienté objet et fonctionnel
+        --
+
+        - Il s'exécute sur la JVM
+        --
+
+        - Scala est interopérable avec Java
+        --
+
+        - Principalement utilisé dans le Big Data (Spark, Kafka...)
+        --
+
+        - mais aussi dans d'autres contextes: Akka, Play, Lagom...
+
+        ---
+
+        ## Pourquoi Scala ?
+        --
+
+        - La JVM offre un large écosystème de librairies et frameworks
+        --
+
+        - Un système de type puissant garantit un code plus sûr
+        --
+
+        - Une syntaxe concise
+        --
+
+        - Une approche souple et pragmatique
+        --
+
+        - Mise en avant de la programmation fonctionnelle <3
+
+        ---
+
+        ## Pourquoi la programmation fonctionnelle ?
+        --
+
+        - Permet de mieux gérer la complexité
+        --
+
+            - code modulaire (pour de vrai !)
+            - style déclaratif
+        --
+        - Facilite la parallélisation des traitements
+
+        ---
+
+        ## Les règles de la programmation fonctionnelle
+        --
+
+        - Immuabilité
+            - facilite l'exécution en parallèle
+        --
+        - Fonctions pures
+            - séparation des données et des comportements
+        --
+        - Rendre explicite certains concepts via des types (Scala)
+        --
+
+
+        => Plus de surprises à l'exécution \o/
+
+        ---
+
+        ## Outils
+
+        **sbt**: outil de build (aka le Maven de Scala)
+
+        - Shell
+        - Exécution inteligente des tests
+        - Continuous tasking
+        - Console
+        - ...
+
+        ---
+
+        ## Outils
+
+        **REPL**: Read Eval Print Loop
+
+        ![REPL](./assets/repl.png)
+
+        ---
+
+        ## Outils
+
+        **Worksheet**: REPL dans l'IDE
+
+        ![Worksheet](./assets/worksheet.png)
+
+        ---
+
+        class: title
+
+        # Syntaxe
+
+        petit spoil avant les exercices...
+
+        ---
+
+        ### Syntaxe
+
+        ```scala
+        val name: String = "Loïc"
+        var age = 28
+        ```
+
+        - val = valeur = constante
+        - var = variable <-- le mal!
+        - **inférence de type**
+        - `;` est facultatif
+
+        ---
+
+        ### Syntaxe
+
+        ```scala
+        def hello(name: String): String = {
+            return "Hello " + name;
+        }
+        ```
+
+        - `{}` définissent une expression composée d'une ou plusieurs expressions
+        - la dernière instruction est toujours renvoyée, `return` est facultatif
+        - le type est défini après le paramètre/fonction/variable...
+        --
+
+
+        ```scala
+        def hello(name: String): String = "Hello " + name
+        ```
+
+        ---
+
+        ## Hand's on
+
+        `./handson go`
+
+        <img src="assets/handson-terminal.png" style="display: block;margin: auto;height: 13em;">
+
+        ---
+
+        ## Hand's on
+
+        La `->` indique l'endroit où vous en êtes
+
+        Remplacer les `__` par la valeur attendue
+
+        Remplacer les `???` par le code nécessaire
+
+        ---
+
+        class: title
+
+        Vous avez 3h...
+
+        # Let's code and have fun !
+    </textarea>
+    <div class="footer">
+        <p>#DevoxxFR</p>
+        <img src="./assets/devoxx-2017/logo-texte-devoxx-france-400.png" />
+    </div>
+    <script src="./assets/remark-latest.min.js"></script>
+    <script>
+        var slideshow = remark.create({
+            ratio: '16:9',
+            navigation: {
+                scroll: false
+            },
+            highlightStyle: 'androidstudio',
+            highlightLines: true,
+            highlightSpans: true
+        });
+    </script>
+</body>
+</html>
